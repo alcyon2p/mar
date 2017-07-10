@@ -11,13 +11,13 @@ body, html, #page-wrapper {
   height: 100%; }
 
 blockquote {
-  border-left: solid 4px #606167; }
+  border-left: solid 4px #aaa29a; }
 
 code {
-  background: #33343c; }
+  background: #92877d; }
 
 hr {
-  border-bottom: solid 1px #606167; }
+  border-bottom: solid 1px #aaa29a; }
 
 /* Icon */
 .icon.major {
@@ -62,16 +62,16 @@ input[type="radio"] {
 
 /* Table */
 table tbody tr {
-  border: solid 1px #606167; }
+  border: solid 1px #aaa29a; }
 
 table thead {
-  border-bottom: solid 1px #606167; }
+  border-bottom: solid 1px #aaa29a; }
 
 table tfoot {
-  border-top: solid 1px #606167; }
+  border-top: solid 1px #aaa29a; }
 
 table.alt tbody tr td {
-  border: solid 1px #606167; }
+  border: solid 1px #aaa29a; }
 
 /* Button */
 input[type="submit"],
@@ -110,7 +110,7 @@ input[type="button"],
 .wrapper.style2 input[type="button"].special:active,
 .wrapper.style2 .button.special:hover,
 .wrapper.style2 .button.special:active {
-  color: #e44c65 !important; }
+  color: #95ca4b !important; }
 
 /* Dropotron */
 .dropotron {

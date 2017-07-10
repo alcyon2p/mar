@@ -885,9 +885,19 @@
 		text-decoration: none;
 		white-space: nowrap;
 
+
+
+		h3 {
+			color: inherit;
+		}
+
 		&:hover, &:active {
 			box-shadow: inset 0 0 0 1px _palette(accent1);
 			color: _palette(accent1) !important;
+
+			span {
+				background-color: _palette(accent1);
+			}
 		}
 
 		&:active {
@@ -1140,13 +1150,20 @@
 		&.style2 {
 			background: _palette(accent1);
 
+			header {
+				p, h2 {
+					color: black !important;
+				}
+			}
+
 			input[type="text"],
 			input[type="password"],
 			input[type="email"],
 			select,
 			textarea {
 				&:focus {
-					border-color: _palette(border2);
+					// border-color: _palette(border2);
+					border-color: black;
 				}
 			}
 
@@ -1157,7 +1174,13 @@
 				&:hover, &:active {
 					background-color: _palette(border-bg) !important;
 					box-shadow: inset 0 0 0 1px _palette(border2) !important;
-					color: _palette(fg-bold) !important;
+					// color: _palette(fg-bold) !important;
+					color: black !important;
+				}
+
+				h3 {
+					// color: inherit;
+					color: black !important;
 				}
 
 				&:active {
@@ -1332,6 +1355,7 @@
 						height: inherit;
 						line-height: inherit;
 						outline: 0;
+						font-weight: 300;
 
 						&.button {
 							height: 2em;
@@ -1373,9 +1397,17 @@
 /* Banner */
 
 	#banner {
-		background-attachment: fixed;
+		background-attachment: fixed !important;
 		background-color: _palette(accent2);
-		background-image: url('../../images/banner.jpg');
+		background-image: url('../../images/loinAuLoinSmall.jpg');
+
+		@media only screen and (min-width: 736px) {
+		    & {
+						background-attachment: fixed;
+		        background-image: url('../../images/loinAuLoin.jpg');
+		    }
+		}
+
 		background-position: center center;
 		background-size: cover;
 		box-shadow: 0 0.25em 0.5em 0 rgba(0,0,0,0.25);
@@ -1393,7 +1425,7 @@
 		}
 
 		&:after {
-			@include vendor('background-image', ('linear-gradient(top, #{_palette(bg-transparent)}, #{_palette(bg-transparent)})', 'url("images/overlay.png");'));
+			@include vendor('background-image', ('linear-gradient(top, #{_palette(bg-very-transparent)}, #{_palette(bg-very-transparent)})', 'url("images/overlay.png");'));
 			content: '';
 			display: block;
 			height: 100%;
@@ -1451,6 +1483,15 @@
 		}
 	}
 
+#messe {
+		background-attachment: fixed;
+		// background-color: _palette(accent2);
+		background-image: url('/images/beaugency.jpg');
+
+		.image {
+			height: 60vh;
+		}
+}
 /* Footer */
 
 	#footer {
