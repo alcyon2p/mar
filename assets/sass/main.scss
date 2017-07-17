@@ -52,6 +52,29 @@
 	$size-wrapper-pad-tb: 6em;
 	$size-wrapper-pad-lr: 3em;
 
+
+/* Form */
+
+input {
+	&#name, &#email {
+		border-color: black;
+
+		&[placeholder] {
+			color: black !important;
+		}
+	}
+}
+
+textarea {
+	&#message {
+		border-color: black;
+	}
+	&[placeholder] {
+		color: black !important;
+	}
+}
+
+
 /* Basic */
 
 	html, body {
@@ -1001,7 +1024,7 @@
 		}
 
 		&:before {
-			background-image: url('images/overlay.png');
+			// background-image: url('images/overlay.png');
 			content: '';
 			display: block;
 			height: 100%;
@@ -1397,19 +1420,31 @@
 /* Banner */
 
 	#banner {
-		background-attachment: fixed !important;
-		background-color: _palette(accent2);
-		background-image: url('../../images/loinAuLoinSmall.jpg');
 
-		@media only screen and (min-width: 736px) {
-		    & {
-						background-attachment: fixed;
-		        background-image: url('../../images/loinAuLoin.jpg');
-		    }
+		.bannerImg {
+			background-attachment: local !important;
+			background-color: _palette(accent2);
+			background-image: url('../../images/loinAuLoinSmall.jpg');
+			background-position: center center;
+			background-size: cover;
+			height: 200vw;
+			width: 100vw;
+			bottom: 0px;
+			position: absolute;
+
+			&.small {
+				height: 200vw;
+			}
+			@media only screen and (min-width: 736px) {
+			    & {
+							background-attachment: scroll;
+			        background-image: url('../../images/loinAuLoin.jpg');
+			    }
+			}
 		}
 
-		background-position: center center;
-		background-size: cover;
+
+
 		box-shadow: 0 0.25em 0.5em 0 rgba(0,0,0,0.25);
 		min-height: 100vh;
 		position: relative;
@@ -1484,12 +1519,17 @@
 	}
 
 #messe {
-		background-attachment: fixed;
-		// background-color: _palette(accent2);
-		background-image: url('/images/beaugency.jpg');
-
 		.image {
 			height: 60vh;
+			background-image: url('/images/beaugency.jpg');
+			background-size: 100vw auto;
+		}
+}
+#reception {
+		.image {
+			height: 60vh;
+			background-image: url('/images/chaffin3.jpg');
+			background-size: 100vw auto;
 		}
 }
 /* Footer */
@@ -1548,6 +1588,7 @@
 	}
 
 /* Large */
+
 
 	@include breakpoint(large) {
 
@@ -1635,7 +1676,7 @@
 				.image.main {
 					display: block;
 					margin: 0;
-					max-height: 40vh;
+					max-height: 80vw;
 					overflow: hidden;
 				}
 
@@ -1667,7 +1708,7 @@
 		/* Banner */
 
 			#banner {
-				background-attachment: scroll;
+				// background-attachment: scroll;
 
 				.goto-next {
 					height: 7em;
@@ -1704,6 +1745,13 @@
 	}
 
 	@include breakpoint(small) {
+
+		#reception {
+			background-image: url('/images/chaffin2Small.jpg');
+			// width: 100%;
+			// min-width: 100%;
+			// background-size: cover;
+		}
 
 		$size-wrapper-pad-tb: 3.25em;
 		$size-wrapper-pad-lr: 1.5em;
@@ -1774,7 +1822,7 @@
 				box-shadow: 0 0.125em 0.5em 0 rgba(0,0,0,0.25);
 
 				.image.main {
-					max-height: 60vh;
+					max-height: 120vw;
 				}
 
 				.content {
@@ -2017,7 +2065,7 @@
 
 			.spotlight {
 				.image.main {
-					max-height: 50vh;
+					max-height: 100vw;
 				}
 
 				.content {
