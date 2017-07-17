@@ -1424,10 +1424,9 @@ textarea {
 		.bannerImg {
 			background-attachment: local !important;
 			background-color: _palette(accent2);
-			background-image: url('../../images/loinAuLoinSmall.jpg');
-			background-position: center center;
+			// background-position: center center;
 			background-size: cover;
-			height: 200vw;
+			height: 100vh;
 			width: 100vw;
 			bottom: 0px;
 			position: absolute;
@@ -1435,11 +1434,20 @@ textarea {
 			&.small {
 				height: 200vw;
 			}
-			@media only screen and (min-width: 736px) {
-			    & {
-							background-attachment: scroll;
-			        background-image: url('../../images/loinAuLoin.jpg');
-			    }
+			@include breakpoint(xlarge) {
+				background-image: url('../../images/v2/loinAuLoin_xlarge.jpg');
+			}
+			@include breakpoint(large) {
+				background-image: url('../../images/v2/loinAuLoin_large.jpg');
+			}
+			@include breakpoint(medium) {
+				background-image: url('../../images/v2/loinAuLoin_medium.jpg');
+			}
+			@include breakpoint(small) {
+				background-image: url('../../images/v2/loinAuLoin_small.jpg');
+			}
+			@include breakpoint(xsmall) {
+				background-image: url('../../images/v2/loinAuLoin_xsmall.jpg');
 			}
 		}
 
@@ -1520,16 +1528,46 @@ textarea {
 
 #messe {
 		.image {
+			background-size: auto 60vh;
 			height: 60vh;
-			background-image: url('/images/beaugency.jpg');
-			background-size: 100vw auto;
+
+			@include breakpoint(xlarge) {
+				background-image: url('/images/v2/beaugency_xlarge.jpg');
+			}
+			@include breakpoint(large) {
+				background-image: url('/images/v2/beaugency_large.jpg');
+			}
+			@include breakpoint(medium) {
+				background-image: url('/images/v2/beaugency_medium.jpg');
+			}
+			@include breakpoint(small) {
+				background-image: url('/images/v2/beaugency_small.jpg');
+			}
+			@include breakpoint(xsmall) {
+				background-image: url('/images/v2/beaugency_xlarge.jpg');
+			}
 		}
 }
 #reception {
 		.image {
+			background-size: auto 60vh;
 			height: 60vh;
-			background-image: url('/images/chaffin3.jpg');
-			background-size: 100vw auto;
+
+			@include breakpoint(xlarge) {
+				background-image: url('/images/v2/chaffin_xlarge.jpg');
+			}
+			@include breakpoint(large) {
+				background-image: url('/images/v2/chaffin_large.jpg');
+			}
+			@include breakpoint(medium) {
+				background-image: url('/images/v2/chaffin_medium.jpg');
+			}
+			@include breakpoint(small) {
+				background-image: url('/images/v2/chaffin_small.jpg');
+			}
+			@include breakpoint(xsmall) {
+				background-image: url('/images/v2/chaffin_xlarge.jpg');
+			}
 		}
 }
 /* Footer */

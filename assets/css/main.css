@@ -2307,19 +2307,28 @@ body.landing #header {
   #banner .bannerImg {
     background-attachment: local !important;
     background-color: #272833;
-    background-image: url("../../images/loinAuLoinSmall.jpg");
-    background-position: center center;
     background-size: cover;
-    height: 200vw;
+    height: 100vh;
     width: 100vw;
     bottom: 0px;
     position: absolute; }
     #banner .bannerImg.small {
       height: 200vw; }
-    @media only screen and (min-width: 736px) {
+    @media screen and (max-width: 1680px) {
       #banner .bannerImg {
-        background-attachment: scroll;
-        background-image: url("../../images/loinAuLoin.jpg"); } }
+        background-image: url("../../images/v2/loinAuLoin_xlarge.jpg"); } }
+    @media screen and (max-width: 1280px) {
+      #banner .bannerImg {
+        background-image: url("../../images/v2/loinAuLoin_large.jpg"); } }
+    @media screen and (max-width: 980px) {
+      #banner .bannerImg {
+        background-image: url("../../images/v2/loinAuLoin_medium.jpg"); } }
+    @media screen and (max-width: 736px) {
+      #banner .bannerImg {
+        background-image: url("../../images/v2/loinAuLoin_small.jpg"); } }
+    @media screen and (max-width: 480px) {
+      #banner .bannerImg {
+        background-image: url("../../images/v2/loinAuLoin_xsmall.jpg"); } }
   #banner:before {
     content: '';
     display: inline-block;
@@ -2372,14 +2381,42 @@ body.is-touch #banner {
   background-attachment: scroll; }
 
 #messe .image {
-  height: 60vh;
-  background-image: url("/images/beaugency.jpg");
-  background-size: 100vw auto; }
+  background-size: auto 60vh;
+  height: 60vh; }
+  @media screen and (max-width: 1680px) {
+    #messe .image {
+      background-image: url("/images/v2/beaugency_xlarge.jpg"); } }
+  @media screen and (max-width: 1280px) {
+    #messe .image {
+      background-image: url("/images/v2/beaugency_large.jpg"); } }
+  @media screen and (max-width: 980px) {
+    #messe .image {
+      background-image: url("/images/v2/beaugency_medium.jpg"); } }
+  @media screen and (max-width: 736px) {
+    #messe .image {
+      background-image: url("/images/v2/beaugency_small.jpg"); } }
+  @media screen and (max-width: 480px) {
+    #messe .image {
+      background-image: url("/images/v2/beaugency_xlarge.jpg"); } }
 
 #reception .image {
-  height: 60vh;
-  background-image: url("/images/chaffin3.jpg");
-  background-size: 100vw auto; }
+  background-size: auto 60vh;
+  height: 60vh; }
+  @media screen and (max-width: 1680px) {
+    #reception .image {
+      background-image: url("/images/v2/chaffin_xlarge.jpg"); } }
+  @media screen and (max-width: 1280px) {
+    #reception .image {
+      background-image: url("/images/v2/chaffin_large.jpg"); } }
+  @media screen and (max-width: 980px) {
+    #reception .image {
+      background-image: url("/images/v2/chaffin_medium.jpg"); } }
+  @media screen and (max-width: 736px) {
+    #reception .image {
+      background-image: url("/images/v2/chaffin_small.jpg"); } }
+  @media screen and (max-width: 480px) {
+    #reception .image {
+      background-image: url("/images/v2/chaffin_xlarge.jpg"); } }
 
 /* Footer */
 #footer {
